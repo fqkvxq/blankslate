@@ -20,8 +20,8 @@ Template Post Type: page
     <div class="wrapper">
         <header>
             <span>
-                takuyakawai.com
-                <a href="./loop.html"></a>
+                <?php bloginfo('name'); ?>
+                <a href="<?php echo home_url() ?>"></a>
             </span>
         </header>
         <div class="loop">
@@ -35,20 +35,20 @@ Template Post Type: page
             $the_query = new WP_Query($args);
             ?>
             <?php for ($i = 0; $i < $the_query->post_count; $i++) : ?>
-                <?php $post_url = $the_query->posts[$i]->guid;?>
+                <?php $post_url = $the_query->posts[$i]->guid; ?>
                 <div class="article">
                     <div class="thumbnail">
                         <img src="<?php echo get_the_post_thumbnail_url($the_query->posts[$i]); ?>" alt="">
                     </div>
                     <div class="title">
-                        <h2><?php echo($the_query->posts[$i]->post_title); ?></h2>
+                        <h2><?php echo ($the_query->posts[$i]->post_title); ?></h2>
                     </div>
                     <a href="<?php echo $post_url ?>"></a>
                 </div>
             <?php endfor; ?>
         </div>
         <footer>
-            <span>&copy; takuyakawai.com</span>
+            <span>&copy; <?php bloginfo('name'); ?></span>
         </footer>
     </div>
 </body>
