@@ -139,6 +139,11 @@ body {
   border-radius: 10px;
 }
 
+.wrapper .single .content img {
+  max-width: 100%;
+  height: auto;
+}
+
 .wrapper footer span {
   padding: 10px 0;
   display: block;
