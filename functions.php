@@ -144,3 +144,18 @@ return count( $comments_by_type['comment'] );
 return $count;
 }
 }
+add_filter(
+    'default_post_metadata',
+    function ( $value, $object_id, $meta_key ) {
+      if ( '_wp_page_template' === $meta_key ) {
+        if ( '' === $value ) {
+          // デフォルトで使用したいテンプレート名に適宜変更する.
+          $value = 'page-top.php';
+        }
+      }
+  
+      return $value;
+    },
+    10,
+    3
+  );

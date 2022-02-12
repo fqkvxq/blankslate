@@ -6,6 +6,10 @@
 <?php edit_post_link(); ?>
 <?php if ( !is_search() ) { get_template_part( 'entry', 'meta' ); } ?>
 </header>
+<?php $the_query = new WP_Query($args); ?>
+<pre>
+<?php var_dump($the_query); ?>
+</pre>
 <?php get_template_part( 'entry', ( is_front_page() || is_home() || is_front_page() && is_home() || is_archive() || is_search() ? 'summary' : 'content' ) ); ?>
 <?php if ( is_singular() ) { get_template_part( 'entry-footer' ); } ?>
 </article>
