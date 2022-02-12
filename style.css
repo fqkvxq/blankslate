@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 Theme Name: BlankSlate
 Theme URI: https://github.com/tidythemes/blankslate
@@ -16,7 +17,6 @@ Text Domain: blankslate
 BlankSlate WordPress Theme © 2011-2022 TidyThemes
 BlankSlate is distributed under the terms of the GNU GPL
 */
-
 @import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;300;400;500;700;800;900&display=swap");
 body {
   font-family: "M PLUS 1p", sans-serif;
@@ -107,6 +107,11 @@ body {
   top: 0;
   left: 0;
   z-index: 1;
+}
+
+.wrapper .loop .article img {
+  max-width: 100%;
+  height: auto;
 }
 
 .wrapper .single {
