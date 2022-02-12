@@ -34,11 +34,6 @@ Template Post Type: page
             );
             $the_query = new WP_Query($args);
             ?>
-            <pre>
-                <?php var_dump($the_query->post_count) ?>
-                <?php var_dump($the_query->posts[0]->post_title); ?>
-                <?php var_dump($the_query->posts[0]->guid); ?>
-            </pre>
             <?php for ($i = 0; $i < $the_query->post_count; $i++) : ?>
                 <?php $post_url = $the_query->posts[$i]->guid;?>
                 <div class="article">
@@ -51,38 +46,6 @@ Template Post Type: page
                     <a href="<?php echo $post_url ?>"></a>
                 </div>
             <?php endfor; ?>
-            <div class="article">
-                <div class="thumbnail">
-                    <img src="https://via.placeholder.com/1200x630" alt="">
-                </div>
-                <div class="title">
-                    <h2>Uber Eats(ウーバーイーツ)のクーポンの使い方</h2>
-                </div>
-            </div>
-            <div class="article">
-                <div class="thumbnail">
-                    <img src="https://via.placeholder.com/1200x630" alt="">
-                </div>
-                <div class="title">
-                    <h2>Uber Eats(ウーバーイーツ)のクーポンの使い方</h2>
-                </div>
-            </div>
-            <div class="article">
-                <div class="thumbnail">
-                    <img src="https://via.placeholder.com/1200x630" alt="">
-                </div>
-                <div class="title">
-                    <h2>Uber Eats(ウーバーイーツ)のクーポンの使い方</h2>
-                </div>
-            </div>
-            <div class="article">
-                <div class="thumbnail">
-                    <img src="https://via.placeholder.com/1200x630" alt="">
-                </div>
-                <div class="title">
-                    <h2>Uber Eats(ウーバーイーツ)のクーポンの使い方</h2>
-                </div>
-            </div>
         </div>
         <footer>
             <span>&copy; takuyakawai.com</span>
