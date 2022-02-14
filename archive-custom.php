@@ -31,6 +31,7 @@ Template Post Type: page
                 'post_type' => 'post',
                 'posts_per_page' => 5,
                 'no_found_rows' => false,  //ページャーを使う時はfalseに。
+                'paged' => get_query_var('paged')
             );
             $the_query = new WP_Query($args);
             ?>
