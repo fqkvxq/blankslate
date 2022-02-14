@@ -46,16 +46,16 @@ Template Post Type: page
                     <a href="<?php echo $post_url ?>"></a>
                 </div>
             <?php endfor; ?>
+            <?php
+            $args = array(
+                'mid_size' => 1,
+                'prev_text' => '&lt;&lt;前へ',
+                'next_text' => '次へ&gt;&gt;',
+                'screen_reader_text' => ' ',
+            );
+            the_posts_pagination($args);
+            ?>
         </div>
-        <?php
-        $args = array(
-            'mid_size' => 1,
-            'prev_text' => '&lt;&lt;前へ',
-            'next_text' => '次へ&gt;&gt;',
-            'screen_reader_text' => ' ',
-        );
-        the_posts_pagination($args);
-        ?>
         <footer>
             <span>&copy; <?php bloginfo('name'); ?></span>
         </footer>
