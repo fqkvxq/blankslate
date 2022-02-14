@@ -29,7 +29,7 @@ Template Post Type: page
             //$argsのプロパティを変えていく
             $args = array(
                 'post_type' => 'post',
-                'posts_per_page' => 10,
+                'posts_per_page' => 5,
                 'no_found_rows' => false,  //ページャーを使う時はfalseに。
             );
             $the_query = new WP_Query($args);
