@@ -48,7 +48,8 @@ Template Post Type: page
                     </div>
                     <a href="<?php echo $post_url ?>"></a>
                 </div>
-                <div class="pnavi">
+            <?php endfor; ?>
+            <div class="pnavi">
                     <?php //ページリスト表示処理
                     global $wp_rewrite;
                     $paginate_base = get_pagenum_link(1);
@@ -70,7 +71,6 @@ Template Post Type: page
                         'next_text' => '次へ >',
                     )); ?>
                 </div>
-            <?php endfor; ?>
         </div>
         <footer>
             <span>&copy; <?php bloginfo('name'); ?></span>
