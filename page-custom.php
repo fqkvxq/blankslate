@@ -67,8 +67,8 @@ Template Post Type: page
                         'total' => $the_query->max_num_pages,
                         'mid_size' => 1,
                         'current' => ($paged ? $paged : 1),
-                        'prev_text' => '< 前へ',
-                        'next_text' => '次へ >',
+                        'prev_text' => '< Prev',
+                        'next_text' => 'Next >',
                     )); ?>
                 </div>
         </div>
