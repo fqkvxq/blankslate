@@ -27,7 +27,7 @@ Template Post Type: page
         <div class="loop">
             <?php
             //$argsのプロパティを変えていく
-            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+            $paged = (get_query_var('page')) ? get_query_var('page') : 1;
             $args = array(
                 'post_type' => 'post',
                 'posts_per_page' => 10,
