@@ -45,6 +45,7 @@ body {
             }
         }
     }
+    // 記事一覧ページ
     .loop {
         .article {
             background-color: #fff;
@@ -91,8 +92,15 @@ body {
                 height: auto;
             }
         }
+        .pnavi {
+            .page-numbers {
+                background-color: #fff;
+                padding: 3px 10px;
+                border-radius: 50%;
+            }
+        }
     }
-    // single
+    // 記事本文ページ
     .single {
         background-color: #fff;
         padding: 10px;

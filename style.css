@@ -114,6 +114,12 @@ body {
   height: auto;
 }
 
+.wrapper .loop .pnavi .page-numbers {
+  background-color: #fff;
+  padding: 3px 10px;
+  border-radius: 50%;
+}
+
 .wrapper .single {
   background-color: #fff;
   padding: 10px;
