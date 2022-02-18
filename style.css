@@ -114,6 +114,11 @@ body {
   height: auto;
 }
 
+.wrapper .loop .pnavi {
+  text-align: center;
+  padding: 10px 0;
+}
+
 .wrapper .loop .pnavi .page-numbers {
   background-color: #fff;
   padding: 3px 10px;
