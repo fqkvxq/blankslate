@@ -18,6 +18,7 @@ Template Post Type: post
     <meta property="og:description" content="" />
     <meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
     <meta property="og:image" content="<?php the_post_thumbnail_url(); ?>" />
+    <meta name="twitter:card" content="summary_large_image" />
     <?php get_header(); ?>
 </head>
 
