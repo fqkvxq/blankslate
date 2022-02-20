@@ -21,8 +21,9 @@ Template Post Type: post
         {
             "@context": "http://schema.org",
             "@type": "Article",
-            "name": "<?php the_title(); ?>",
+            "headline": "<?php the_title(); ?>",
             "datePublished": "<?php the_time('Y/m/d') ?>",
+            "dateModified": "<?php the_modified_date('Y/m/d') ?>",
             "image": "<?php the_post_thumbnail_url(); ?>"
         }
     </script>
