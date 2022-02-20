@@ -16,11 +16,21 @@ Template Post Type: post
 </head>
 
 <body>
+    <!-- Google 構造化データ マークアップ支援ツールが生成した JSON-LD マークアップです。 -->
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "Article",
+            "name": '<?php the_title(); ?>',
+            "datePublished": '<?php the_time('Y/m/d') ?>',
+            "image": '<?php the_post_thumbnail_url(); ?>'
+        }
+    </script>
     <div class="wrapper">
         <header>
             <span>
                 <?php bloginfo('name'); ?>
-                <a href="<?php echo home_url()?>"></a>
+                <a href="<?php echo home_url() ?>"></a>
             </span>
         </header>
         <div class="single">
@@ -34,8 +44,8 @@ Template Post Type: post
                 <?php the_content(); ?>
             </div>
             <div class="date">
-                <span>公開日：<time itemprop="datePublished" datetime="<?php the_time('c');?>"><?php the_time('Y/m/d') ?></span>
-                <span>最終更新日：<time itemprop="dateModified" datetime="<?php the_modified_date('c');?>"><?php the_modified_date('Y/m/d') ?></span>
+                <span>公開日：<time itemprop="datePublished" datetime="<?php the_time('c'); ?>"><?php the_time('Y/m/d') ?></span>
+                <span>最終更新日：<time itemprop="dateModified" datetime="<?php the_modified_date('c'); ?>"><?php the_modified_date('Y/m/d') ?></span>
             </div>
         </div>
         <footer>
