@@ -34,8 +34,8 @@ Template Post Type: post
                 <?php the_content(); ?>
             </div>
             <div class="date">
-                <span>公開日：<?php the_time('Y/m/d') ?></span>
-                <span>最終更新日：<?php the_modified_date('Y/m/d') ?></span>
+                <span>公開日：<time itemprop="datePublished" datetime="<?php the_time('c');?>"><?php the_time('Y/m/d') ?></span>
+                <span>最終更新日：<time itemprop="dateModified" datetime="<?php the_modified_date('c');?>"><?php the_modified_date('Y/m/d') ?></span>
             </div>
         </div>
         <footer>
