@@ -12,6 +12,12 @@ Template Post Type: post
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:url" content="<?php get_permalink(); ?>" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="<?php the_title(); ?>" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
+    <meta property="og:image" content="<?php the_post_thumbnail_url(); ?>" />
     <?php get_header(); ?>
 </head>
 
