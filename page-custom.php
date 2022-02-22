@@ -34,6 +34,7 @@ Template Post Type: page
                 'no_found_rows' => false,  //ページャーを使う時はfalseに。
                 'paged' => $paged,
                 'orderby'     => 'date',
+                'category__not_in' => array(4),
             );
             $the_query = new WP_Query($args);
             ?>
