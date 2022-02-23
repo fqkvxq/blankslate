@@ -51,32 +51,42 @@ Template Post Type: page
                 </div>
             <?php endfor; ?>
             <div class="pnavi">
-                    <?php //ページリスト表示処理
-                    global $wp_rewrite;
-                    $paginate_base = get_pagenum_link(1);
-                    if (strpos($paginate_base, '?') || !$wp_rewrite->using_permalinks()) {
-                        $paginate_format = '';
-                        $paginate_base = add_query_arg('paged', '%#%');
-                    } else {
-                        $paginate_format = (substr($paginate_base, -1, 1) == '/' ? '' : '/') .
-                            user_trailingslashit('page/%#%/', 'paged');
-                        $paginate_base .= '%_%';
-                    }
-                    echo paginate_links(array(
-                        'base' => $paginate_base,
-                        'format' => $paginate_format,
-                        'total' => $the_query->max_num_pages,
-                        'mid_size' => 1,
-                        'current' => ($paged ? $paged : 1),
-                        'prev_text' => '< Prev',
-                        'next_text' => 'Next >',
-                    )); ?>
-                </div>
+                <?php //ページリスト表示処理
+                global $wp_rewrite;
+                $paginate_base = get_pagenum_link(1);
+                if (strpos($paginate_base, '?') || !$wp_rewrite->using_permalinks()) {
+                    $paginate_format = '';
+                    $paginate_base = add_query_arg('paged', '%#%');
+                } else {
+                    $paginate_format = (substr($paginate_base, -1, 1) == '/' ? '' : '/') .
+                        user_trailingslashit('page/%#%/', 'paged');
+                    $paginate_base .= '%_%';
+                }
+                echo paginate_links(array(
+                    'base' => $paginate_base,
+                    'format' => $paginate_format,
+                    'total' => $the_query->max_num_pages,
+                    'mid_size' => 1,
+                    'current' => ($paged ? $paged : 1),
+                    'prev_text' => '< Prev',
+                    'next_text' => 'Next >',
+                )); ?>
+            </div>
         </div>
         <footer>
             <span>&copy; <?php bloginfo('name'); ?></span>
         </footer>
     </div>
+    <!-- ClickHeat -->
+    <script type="text/javascript" src="https://kawaikikaku.tokyo/clickheat/js/clickheat.js"></script><noscript>
+        <p><a href="http://www.dugwood.com/index.html">CMS</a></p>
+    </noscript>
+    <script>
+        clickHeatSite = '';
+        clickHeatGroup = encodeURIComponent(window.location.pathname + window.location.search);
+        clickHeatServer = 'https://kawaikikaku.tokyo/clickheat/click.php';
+        initClickHeat();
+    </script>
 </body>
 
 </html>

@@ -60,6 +60,15 @@ Template Post Type: post
             <span>&copy; <?php bloginfo('name'); ?></span>
         </footer>
     </div>
+    <script type="text/javascript" src="https://kawaikikaku.tokyo/clickheat/js/clickheat.js"></script><noscript>
+        <p><a href="http://www.dugwood.com/index.html">CMS</a></p>
+    </noscript>
+    <script>
+        clickHeatSite = '';
+        clickHeatGroup = encodeURIComponent(window.location.pathname + window.location.search);
+        clickHeatServer = 'https://kawaikikaku.tokyo/clickheat/click.php';
+        initClickHeat();
+    </script>
 </body>
 
 </html>
