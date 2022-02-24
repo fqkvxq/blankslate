@@ -47,7 +47,7 @@ Template Post Type: page
                     <div class="title">
                         <h2><?php echo ($the_query->posts[$i]->post_title); ?></h2>
                     </div>
-                    <a href="<?php echo $post_url ?>"></a>
+                    <a href="<?php echo $post_url ?>" aria-label="<?php echo ($the_query->posts[$i]->post_title); ?>"></a>
                 </div>
             <?php endfor; ?>
             <div class="pnavi">
