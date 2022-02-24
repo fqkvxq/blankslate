@@ -182,3 +182,27 @@ function dequeue_plugins_style() {
 add_action( 'wp_enqueue_scripts', 'dequeue_plugins_style', 9999);
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 remove_action( 'wp_print_styles', 'print_emoji_styles' );
+
+function my_description(){   
+	// 現在の投稿オブジェクトを取得
+	$post_data = get_post();
+	// 本文を取得
+	$content = $post_data->post_content;
+    if( is_single() && $content ){
+    	// HTML、PHPタグを削除
+        $content = strip_tags( $content );
+        
+        // 改行、シングル、ダブルクォーテーションを削除
+        $str = array( "\r\n", "\r", "\n", "'", '"' );
+        $content = str_replace( $str, "", $content );
+        
+        // []に囲まれている文字列を除去 
+        $regexp = "/\[.*?\]/"; 
+        $content = preg_replace($regexp, "", $content);
+        
+        // 現在のページの本文から一部を抜粋
+        $description = mb_strimwidth( $content, 0, 260, "……", "utf-8" ); 
+        echo "<meta name='description' content='" . $description . "'>";
+    }
+}
+add_action('wp_head', 'my_description');
