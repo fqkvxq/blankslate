@@ -53,7 +53,7 @@ Template Post Type: post
             </div>
             <div class="date">
                 <span>公開日：<time itemprop="datePublished" datetime="<?php the_time('c'); ?>"><?php the_time('Y/m/d') ?></span>
-                <span>最終更新日：<time itemprop="dateModified" datetime="<?php the_modified_date('c'); ?>"><?php the_modified_date('Y/m/d') ?>(<?php wp_revisions_to_keep(the_id());?>)</span>
+                <span>最終更新日：<time itemprop="dateModified" datetime="<?php the_modified_date('c'); ?>"><?php the_modified_date('Y/m/d') ?>(<?php wp_get_post_revision(the_id());?>)</span>
             </div>
         </div>
         <footer>
