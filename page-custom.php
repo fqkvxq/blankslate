@@ -33,7 +33,7 @@ Template Post Type: page
                 // 'posts_per_page' => 10,
                 'no_found_rows' => false,  //ページャーを使う時はfalseに。
                 'paged' => $paged,
-                'orderby'     => 'date',
+                'orderby'     => 'modified', //更新日順
                 'category__not_in' => array(4),
             );
             $the_query = new WP_Query($args);
