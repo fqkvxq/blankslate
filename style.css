@@ -17,9 +17,7 @@ Text Domain: blankslate
 BlankSlate WordPress Theme © 2011-2022 TidyThemes
 BlankSlate is distributed under the terms of the GNU GPL
 */
-@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;300;400;500;700;800;900&display=swap");
 body {
-  font-family: "M PLUS 1p", sans-serif;
   background-color: #FAFAFA;
 }
 
