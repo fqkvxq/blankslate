@@ -175,3 +175,8 @@ add_filter(
   10,
   3
 );
+function dequeue_plugins_style() {
+  //プラグインIDを指定し解除する
+  wp_dequeue_style('wp-block-library');
+}
+add_action( 'wp_enqueue_scripts', 'dequeue_plugins_style', 9999);
