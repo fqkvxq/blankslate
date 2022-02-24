@@ -21,7 +21,7 @@ Template Post Type: page
         <header>
             <span>
                 <?php bloginfo('name'); ?>
-                <a href="<?php echo home_url() ?>"></a>
+                <a href="<?php echo home_url() ?>" aria-label="<?php bloginfo('name'); ?>"></a>
             </span>
         </header>
         <div class="loop">
