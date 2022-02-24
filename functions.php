@@ -88,10 +88,10 @@ if (!function_exists('blankslate_wp_body_open')) {
   }
 }
 add_action('wp_body_open', 'blankslate_skip_link', 5);
-function blankslate_skip_link()
-{
-  echo '<a href="#content" class="skip-link screen-reader-text">' . esc_html__('Skip to the content', 'blankslate') . '</a>';
-}
+// function blankslate_skip_link()
+// {
+//   echo '<a href="#content" class="skip-link screen-reader-text">' . esc_html__('Skip to the content', 'blankslate') . '</a>';
+// }
 // add_filter('the_content_more_link', 'blankslate_read_more_link'); 無効
 function blankslate_read_more_link()
 {
