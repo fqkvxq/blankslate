@@ -87,7 +87,7 @@ if (!function_exists('blankslate_wp_body_open')) {
     do_action('wp_body_open');
   }
 }
-add_action('wp_body_open', 'blankslate_skip_link', 5);
+// add_action('wp_body_open', 'blankslate_skip_link', 5);
 function blankslate_skip_link()
 {
   echo '<a href="#content" class="skip-link screen-reader-text">' . esc_html__('Skip to the content', 'blankslate') . '</a>';
