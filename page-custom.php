@@ -42,7 +42,7 @@ Template Post Type: page
                 <?php $post_url = $the_query->posts[$i]->guid; ?>
                 <div class="article">
                     <div class="thumbnail">
-                        <img src="<?php echo get_the_post_thumbnail_url($the_query->posts[$i],'medium'); ?>" alt="">
+                        <img src="<?php echo get_the_post_thumbnail_url($the_query->posts[$i],'medium'); ?>" width="260" height="170" alt="">
                     </div>
                     <div class="title">
                         <h2><?php echo ($the_query->posts[$i]->post_title); ?></h2>
