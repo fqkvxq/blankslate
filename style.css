@@ -147,6 +147,8 @@ body {
 .wrapper .single .thumbnail img {
   max-width: 100%;
   border-radius: 10px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .wrapper .single .content img {
