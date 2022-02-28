@@ -24,6 +24,7 @@ Template Post Type: post
 
 <body>
     <!-- Google 構造化データ マークアップ支援ツールが生成した JSON-LD マークアップです。 -->
+    <?php $ID = $post->post_author; ?>
     <script type="application/ld+json">
         {
             "@context": "http://schema.org",
@@ -32,7 +33,7 @@ Template Post Type: post
             "datePublished": "<?php the_time('Y/m/d') ?>",
             "dateModified": "<?php the_modified_date('Y/m/d') ?>",
             "image": "<?php the_post_thumbnail_url(); ?>",
-            "author": "<?php the_author(); ?>"
+            "author": "<?php echo get_the_author_meta('user_login',$ID); ?>"
         }
     </script>
     <div class="wrapper">
