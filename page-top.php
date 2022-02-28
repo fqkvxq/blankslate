@@ -31,7 +31,8 @@ Template Post Type: post
             "headline": "<?php the_title(); ?>",
             "datePublished": "<?php the_time('Y/m/d') ?>",
             "dateModified": "<?php the_modified_date('Y/m/d') ?>",
-            "image": "<?php the_post_thumbnail_url(); ?>"
+            "image": "<?php the_post_thumbnail_url(); ?>",
+            "author": "<?php get_the_author(); ?>",
         }
     </script>
     <div class="wrapper">
