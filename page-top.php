@@ -46,7 +46,7 @@ Template Post Type: post
                 <h1><?php the_title(); ?></h1>
             </div>
             <div class="thumbnail">
-                <img src="<?php the_post_thumbnail_url(); ?>" alt="">
+                <img src="<?php the_post_thumbnail_url(); ?>" width="1200" height="635" alt="">
             </div>
             <div class="content">
                 <?php the_content(); ?>
