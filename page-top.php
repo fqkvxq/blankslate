@@ -33,7 +33,10 @@ Template Post Type: post
             "datePublished": "<?php the_time('Y/m/d') ?>",
             "dateModified": "<?php the_modified_date('Y/m/d') ?>",
             "image": "<?php the_post_thumbnail_url(); ?>",
-            "author": "<?php echo get_the_author_meta('user_login',$ID); ?>"
+            "author": {
+                "@type": "Person",
+                "name": "<?php echo get_the_author_meta('user_login',$ID); ?>",
+            }
         }
     </script>
     <div class="wrapper">
