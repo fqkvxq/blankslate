@@ -35,7 +35,7 @@ Template Post Type: post
             "image": "<?php the_post_thumbnail_url(); ?>",
             "author": {
                 "@type": "Person",
-                "name": "<?php echo get_the_author_meta('user_login',$ID); ?>",
+                "name": "<?php echo get_the_author_meta('user_login',$ID); ?>"
             }
         }
     </script>
