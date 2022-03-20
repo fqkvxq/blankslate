@@ -206,3 +206,5 @@ function my_description(){
     }
 }
 add_action('wp_head', 'my_description');
+
+add_editor_style('style.css');
