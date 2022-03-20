@@ -137,6 +137,20 @@ body {
                 max-width: 100%;
                 height: auto;
             }
+            .cv-button {
+                display: block;
+                background-color: #138C35;
+                color: #fff;
+                padding: 10px;
+                font-weight: bold;
+                text-decoration: none;
+                border-radius: 999px;
+                border-bottom: 7px solid #0B5522;
+                text-align: center;
+                max-width: 100%;
+                margin: 10px auto;
+                font-size: 24px;
+            }
         }
     }
     footer {
