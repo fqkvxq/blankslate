@@ -166,6 +166,70 @@ body {
   max-width: 100%;
   margin: 10px auto;
   font-size: 24px;
+  -webkit-animation: yureru-s 2s infinite;
+          animation: yureru-s 2s infinite;
+}
+
+@-webkit-keyframes yureru-s {
+  0% {
+    -webkit-transform: translate(2px, 0px);
+            transform: translate(2px, 0px);
+  }
+  5% {
+    -webkit-transform: translate(-2px, 0px);
+            transform: translate(-2px, 0px);
+  }
+  10% {
+    -webkit-transform: translate(2px, 0px);
+            transform: translate(2px, 0px);
+  }
+  15% {
+    -webkit-transform: translate(-2px, 0px);
+            transform: translate(-2px, 0px);
+  }
+  20% {
+    -webkit-transform: translate(2px, 0px);
+            transform: translate(2px, 0px);
+  }
+  25% {
+    -webkit-transform: translate(-2px, 0px);
+            transform: translate(-2px, 0px);
+  }
+  30% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+}
+
+@keyframes yureru-s {
+  0% {
+    -webkit-transform: translate(2px, 0px);
+            transform: translate(2px, 0px);
+  }
+  5% {
+    -webkit-transform: translate(-2px, 0px);
+            transform: translate(-2px, 0px);
+  }
+  10% {
+    -webkit-transform: translate(2px, 0px);
+            transform: translate(2px, 0px);
+  }
+  15% {
+    -webkit-transform: translate(-2px, 0px);
+            transform: translate(-2px, 0px);
+  }
+  20% {
+    -webkit-transform: translate(2px, 0px);
+            transform: translate(2px, 0px);
+  }
+  25% {
+    -webkit-transform: translate(-2px, 0px);
+            transform: translate(-2px, 0px);
+  }
+  30% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
 }
 
 .wrapper footer span {
