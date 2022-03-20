@@ -1,14 +1,14 @@
-.content {
+body {
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
 }
 
-.content img {
+img {
   max-width: 100%;
   height: auto;
 }
 
-.content .cv-button {
+.cv-button {
   display: block;
   background-color: #138c35;
   color: #fff;
