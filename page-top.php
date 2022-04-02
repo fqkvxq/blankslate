@@ -56,9 +56,6 @@ Template Post Type: post
             <div class="title">
                 <h1><?php the_title(); ?></h1>
             </div>
-            <div class="thumbnail">
-                <img src="https://kawaikikaku.tokyo/wp-content/themes/blankslate/create_ogp_img.php?text=<?php the_title(); ?>" alt="">
-            </div>
             <div class="content">
                 <?php the_content(); ?>
             </div>
