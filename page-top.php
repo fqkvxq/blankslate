@@ -46,6 +46,12 @@ Template Post Type: post
                 <a href="<?php echo home_url() ?>" aria-label="<?php bloginfo('name'); ?>"></a>
             </span>
         </header>
+                <?php if (is_user_logged_in()) : ?>
+            <?php
+            $edit_page_url = get_edit_post_link($post_id);
+            ?>
+            <a href="<?php echo $edit_page_url; ?>">記事を編集</a>
+        <?php endif; ?>
         <div class="single">
             <div class="title">
                 <h1><?php the_title(); ?></h1>
