@@ -17,7 +17,7 @@ Template Post Type: post
     <meta property="og:title" content="<?php the_title(); ?>" />
     <meta property="og:description" content="" />
     <meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
-    <meta property="og:image" content="<?php the_post_thumbnail_url(); ?>" />
+    <meta property="og:image" content="https://kawaikikaku.tokyo/wp-content/themes/blankslate/create_ogp_img.php?text=<?php echo ($the_query->posts[$i]->post_title); ?>" />
     <meta name="twitter:card" content="summary_large_image" />
     <?php get_header(); ?>
 </head>
@@ -51,7 +51,7 @@ Template Post Type: post
                 <h1><?php the_title(); ?></h1>
             </div>
             <div class="thumbnail">
-                <img src="<?php the_post_thumbnail_url(); ?>" width="680" height="360" alt="">
+                <img src="https://kawaikikaku.tokyo/wp-content/themes/blankslate/create_ogp_img.php?text=<?php echo ($the_query->posts[$i]->post_title); ?>" width="680" height="360" alt="">
             </div>
             <div class="content">
                 <?php the_content(); ?>
