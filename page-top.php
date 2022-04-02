@@ -80,7 +80,7 @@ Template Post Type: post
             $the_query = new WP_Query($args);
             ?>
             <ul>
-                <?php for ($i = 0; $i < $the_query->post_count; $i++) : ?>
+                <?php for ($i = 0; $i < $wp_query->found_posts; $i++) : ?>
                     <li><a href="<?php the_permalink($the_query->posts[$i]->ID); ?>" aria-label="<?php echo ($the_query->posts[$i]->post_title); ?>"><?php echo ($the_query->posts[$i]->post_title); ?></a></li>
                 <?php endfor; ?>
             </ul>
