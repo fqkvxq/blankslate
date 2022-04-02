@@ -71,7 +71,7 @@ Template Post Type: post
             $paged = (get_query_var('page')) ? get_query_var('page') : 1;
             $args = array(
                 'post_type' => 'post',
-                // 'posts_per_page' => 10,
+                'posts_per_page' => 999,
                 'no_found_rows' => false,  //ページャーを使う時はfalseに。
                 'paged' => $paged,
                 'orderby' => 'modified', //更新日順
