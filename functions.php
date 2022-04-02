@@ -206,3 +206,8 @@ function my_description(){
     }
 }
 add_action('wp_head', 'my_description');
+
+// テーマフォルダ直下のeditor-style.cssを読み込み
+add_action('admin_init',function(){
+    add_editor_style();
+});

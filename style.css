@@ -118,7 +118,11 @@ body {
 .wrapper .loop .pnavi .page-numbers {
   background-color: #fff;
   padding: 3px 10px;
-  border-radius: 50%;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  border: 1px solid #c0c0c0;
 }
 
 .wrapper .single {
@@ -151,6 +155,85 @@ body {
 .wrapper .single .content img {
   max-width: 100%;
   height: auto;
+}
+
+.wrapper .single .content .cv-button {
+  display: block;
+  background-color: #138C35;
+  color: #fff;
+  padding: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 999px;
+  border-bottom: 7px solid #0B5522;
+  text-align: center;
+  max-width: 100%;
+  margin: 10px auto;
+  font-size: 24px;
+  -webkit-animation: yureru-s 2s infinite;
+          animation: yureru-s 2s infinite;
+}
+
+@-webkit-keyframes yureru-s {
+  0% {
+    -webkit-transform: translate(2px, 0px);
+            transform: translate(2px, 0px);
+  }
+  5% {
+    -webkit-transform: translate(-2px, 0px);
+            transform: translate(-2px, 0px);
+  }
+  10% {
+    -webkit-transform: translate(2px, 0px);
+            transform: translate(2px, 0px);
+  }
+  15% {
+    -webkit-transform: translate(-2px, 0px);
+            transform: translate(-2px, 0px);
+  }
+  20% {
+    -webkit-transform: translate(2px, 0px);
+            transform: translate(2px, 0px);
+  }
+  25% {
+    -webkit-transform: translate(-2px, 0px);
+            transform: translate(-2px, 0px);
+  }
+  30% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+}
+
+@keyframes yureru-s {
+  0% {
+    -webkit-transform: translate(2px, 0px);
+            transform: translate(2px, 0px);
+  }
+  5% {
+    -webkit-transform: translate(-2px, 0px);
+            transform: translate(-2px, 0px);
+  }
+  10% {
+    -webkit-transform: translate(2px, 0px);
+            transform: translate(2px, 0px);
+  }
+  15% {
+    -webkit-transform: translate(-2px, 0px);
+            transform: translate(-2px, 0px);
+  }
+  20% {
+    -webkit-transform: translate(2px, 0px);
+            transform: translate(2px, 0px);
+  }
+  25% {
+    -webkit-transform: translate(-2px, 0px);
+            transform: translate(-2px, 0px);
+  }
+  30% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
 }
 
 .wrapper footer span {

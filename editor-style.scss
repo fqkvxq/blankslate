@@ -1,0 +1,49 @@
+body {
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    max-width: 375px;
+    margin: 0 auto;
+    display: block;
+    background-color: #f0f0f0;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.cv-button {
+    display: block;
+    background-color: #138c35;
+    color: #fff;
+    padding: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 999px;
+    border-bottom: 7px solid #0b5522;
+    text-align: center;
+    max-width: 100%;
+    margin: 10px auto;
+    font-size: 24px;
+    animation: yureru-s 2s infinite;
+}
+@keyframes yureru-s {
+    0% {
+        transform: translate(2px, 0px);
+    }
+    5% {
+        transform: translate(-2px, 0px);
+    }
+    10% {
+        transform: translate(2px, 0px);
+    }
+    15% {
+        transform: translate(-2px, 0px);
+    }
+    20% {
+        transform: translate(2px, 0px);
+    }
+    25% {
+        transform: translate(-2px, 0px);
+    }
+    30% {
+        transform: translate(0px, 0px);
+    }
+}
