@@ -35,7 +35,7 @@ Template Post Type: post
             "image": "<?php the_post_thumbnail_url(); ?>",
             "author": {
                 "@type": "Person",
-                "name": "<?php echo get_the_author_meta('user_login',$ID); ?>"
+                "name": "<?php echo get_the_author_meta('user_login', $ID); ?>"
             }
         }
     </script>
@@ -46,7 +46,7 @@ Template Post Type: post
                 <a href="<?php echo home_url() ?>" aria-label="<?php bloginfo('name'); ?>"></a>
             </span>
         </header>
-                <?php if (is_user_logged_in()) : ?>
+        <?php if (is_user_logged_in()) : ?>
             <?php
             $edit_page_url = get_edit_post_link($post_id);
             ?>
@@ -63,6 +63,27 @@ Template Post Type: post
                 <span>公開日：<time itemprop="datePublished" datetime="<?php the_time('c'); ?>"><?php the_time('Y/m/d') ?></span>
                 <span>最終更新日：<time itemprop="dateModified" datetime="<?php the_modified_date('c'); ?>"><?php the_modified_date('Y/m/d') ?></span>
             </div>
+        </div>
+        <div class="kanren">
+            <h2>関連記事</h2>
+            <?php
+            //$argsのプロパティを変えていく
+            $paged = (get_query_var('page')) ? get_query_var('page') : 1;
+            $args = array(
+                'post_type' => 'post',
+                // 'posts_per_page' => 10,
+                'no_found_rows' => false,  //ページャーを使う時はfalseに。
+                'paged' => $paged,
+                'orderby' => 'modified', //更新日順
+                // 'category__not_in' => array(4),
+            );
+            $the_query = new WP_Query($args);
+            ?>
+            <ul>
+                <?php for ($i = 0; $i < $the_query->post_count; $i++) : ?>
+                    <li><a href="<?php the_permalink($the_query->posts[$i]->ID); ?>" aria-label="<?php echo ($the_query->posts[$i]->post_title); ?>"><?php echo ($the_query->posts[$i]->post_title); ?></a></li>
+                <?php endfor; ?>
+            </ul>
         </div>
         <footer>
             <span>&copy; <?php bloginfo('name'); ?></span>

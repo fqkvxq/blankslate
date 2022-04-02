@@ -236,6 +236,10 @@ body {
   }
 }
 
+.wrapper .kanren h2 {
+  text-align: center;
+}
+
 .wrapper footer span {
   padding: 10px 0;
   display: block;
