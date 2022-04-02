@@ -42,7 +42,7 @@ Template Post Type: page
                 <?php $post_url = $the_query->posts[$i]->guid; ?>
                 <div class="article">
                     <div class="thumbnail">
-                        <img src="create_ogp_img.php?text=<?php echo ($the_query->posts[$i]->post_title); ?>" width="200" height="100" alt="">
+                        <img src="https://kawaikikaku.tokyo/wp-content/themes/blankslate/create_ogp_img.php?text=<?php echo ($the_query->posts[$i]->post_title); ?>" width="200" height="100" alt="">
                     </div>
                     <div class="title">
                         <h2><?php echo ($the_query->posts[$i]->post_title); ?></h2>
